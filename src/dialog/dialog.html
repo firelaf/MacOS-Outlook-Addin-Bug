@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>MacOS Dialog Roaming Settings Bug</h1>
+  <p>This is a demonstration of an Outlook for MacOS bug. Outlook for MacOS cannot properly save or read roaming settings from a dialog box.</p>
+  <p>Roaming settings should be the same wherever they're read from in an Add-in and they should be persistant through closes and opens of a dialog.</p>
+  <p>On MacOS, however they are not. Dialogs cannot read or write roaming settings properly.</p>
+  <p>Try opening the dialog, and setting the value inside to true or false. The setting should persist when you close the dialog and open it back up.</p>
+  <p>This will work if done from the Taskpane, but no the Dialog.</p>
+  
+  <select id="roaming-select" name="roaming" title="Roaming">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+  <button id="roaming-set" type="button">Set Roaming</button>
+
+  <h3>Current value in Roaming Settings:</h3>
+  <h3 id="roaming-current"></h3>
+
+  <script src="dialog.js"></script>
+</body>
+</html>
